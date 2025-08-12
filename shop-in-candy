@@ -1,3 +1,10 @@
+Approach - 
+-First sort the vector
+-for minimum : add first element and remove last k elements , do until you visited all elements.
+-for maximum : add last elements and remove first k elements , -----------||--------------------.
+
+
+
 class Solution {
   public:
     vector<int> minMaxCandy(vector<int>& prices, int k) {
