@@ -1,0 +1,29 @@
+class Solution {
+  public:
+    vector<int> minMaxCandy(vector<int>& prices, int k) {
+        sort(prices.begin(),prices.end());
+        int i=0;
+        int j=prices.size()-1;
+        vector<int> result(2);
+        result[0] = 0;
+        result[1] = 0;
+        
+        while(i<=j)
+        {
+            result[0] += prices[i];
+            j = j-k;
+            i++;
+            
+        }
+        j=prices.size()-1;
+        i=0;
+        while(i<=j)
+        {
+            result[1] += prices[j];
+            i += k;
+            j--;
+        }
+        
+        return result;
+    }
+};
